@@ -4,13 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LyriQuiz!</title>
+    <!-- jQuery -->
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	  <!-- Bootstrap CDN-->
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	  <!-- Including firebase.js-->
+	  <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+	  <!-- Including moment.js-->
+	  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 </head>
 <body>
 
-    <span id="output"></span>
+    <!-- <span id="output"></span>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="mm.js"></script>
-    
+    <script src="mm.js"></script> -->
+
+    <div class="container">
+                <br>
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <!-- Jumbotron -->
+                    <div class="col-md-10">
+                            <div class="jumbotron-fluid mb-3 bg-primary text-light pt-5 pb-5 rounded ">
+                                <div class="container">
+                                    <h1 class="text-center">LYRI QUIZ</h1>
+                                    <p class="lead text-center">Do you know your band well?</p>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+                <div class="row mt-3 mb-3">
+                	<!-- Empty Col -->
+                    <div class="col-md-1"></div>                	
+                    <!-- Player 1 -->
+                    <div class="col-md-10">
+                        <div class="card">
+                            <div class="card-header bg-primary text-light text-center " value = "1" >Quiz Area</div>
+                            <div class="card-body"> 
+                                <form>    
+                                    <label for="quiz-name"></label>
+                                    <input type="text" class="form-control" id="quiz-area">    
+                                </form>                                                            
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Empty Col -->
+                    <div class="col-md-1"></div> 
+                </div> 
+                <div class="row mt-3 mb-3">  
+                   <!-- <div class="col-md-2 bg-success text-center rounded-circle mt-5 pt-3" id="requestPlay"> Click to play</div> -->                      
+                    <div class="col-md-1"></div>                      
+                    <!-- Player 2 -->
+                    <div class="col-md-10">
+                        <div class="card">
+                            <div class="card-header bg-primary text-light text-center" value = "2">Message Area</div>
+                            <div class="card-body"> 
+                                <form>    
+                                    <label for="message-box"></label>
+                                    <input type="text" class="form-control border-none" id="message-box">    
+                                </form>                                    
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+                <div class="row mt-5 mb-3"></div>
+        
+            </div>
+        
+            <!-- Including quiz.js -->
+            <script src="datamuseAPI.js"></script>
+
+
+
 </body>
 </html>
