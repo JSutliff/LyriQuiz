@@ -11,8 +11,7 @@ $(document).ready(function () {
 
   preFilter();
 
-    var apiKey = "a731b06ce37dbb83ac69163abef82fef"
-    var artist = "Grateful Dead"
+    var apiKey = "a731b06ce37dbb83ac69163abef82fef";
     // var queryURL = "http://api.musixmatch.com/ws/1.1/artist.search?q_artist=" + artist + "&apikey=" + apiKey;
     // $.ajax({
     //     url: queryURL,
@@ -61,6 +60,23 @@ $(document).ready(function () {
                           $("#output").text(JSON.parse(response));
                           console.log(response);
                           console.log(JSON.parse(response).message.body.lyrics.lyrics_body);
+
+                          preFilter();
+                      
+                          apiKey = "a731b06ce37dbb83ac69163abef82fef"
+                          var word = "rain"
+                          var queryURL = "http://api.datamuse.com/words/?rel_rhy=" + word + "&max=10";
+                          $.ajax({
+                              url: queryURL,
+                              method: "GET",
+                      
+                          }).then(function(response){
+                              // $("#output").text(JSON.parse(response));
+                              console.log("some Words similar to " + word + "  are" );
+                              console.log(response);
+                              // console.log(JSON.parse(response) )
+                          });
+                      
                 } );
           } );
     } );
