@@ -59,7 +59,8 @@ $(document).ready(function () {
                       }).then(function(response){
                           $("#output").text(JSON.parse(response));
                           console.log(response);
-                          console.log(JSON.parse(response).message.body.lyrics.lyrics_body);
+                          var lyrics = JSON.parse(response).message.body.lyrics.lyrics_body;
+                          console.log('These are the lyrics: ', lyrics);
 
                           preFilter();
                       
