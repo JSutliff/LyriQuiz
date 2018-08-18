@@ -59,9 +59,37 @@ body , html{
     background-size: cover;
     padding-right: 20%;
     height: 500px;
+
+    position: relative;
 }
 
 .scoreBox{
     background-color: rgb(250,145,176);
     /* background-color: #c9b9ee */
+}
+
+#user-name-box {
+    background-color:yellow;
+
+    position: absolute;
+    
+    top: 44%;
+    max-width: 32%;
+    left: 4%  
+}
+#password-box {
+    background-color:yellow;
+
+    position: absolute;
+    
+    top: 70%;
+    max-width: 32%;
+    left: 4%  
+}
+#submit{
+    position: absolute;
+    
+    top: 87%;
+    max-width: 32%;
+    left: 4%  
 }
