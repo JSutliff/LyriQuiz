@@ -1,0 +1,49 @@
+body , html{
+    /* background-color: rgb(146,179,180); */
+    background: url("../images/lights.jpg");
+    
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+
+    font-family: 'Hanalei Fill', cursive;
+	font-size: 20px;
+    font-style: bold;
+   
+}
+
+.welcome{    
+    /* background-color:rgb(236, 236, 185) */
+}
+
+.jumbotron-fluid { 
+    background: url("../images/logo_retina.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /* position: fixed; */
+    /* width: 1400px;; */
+    height: 600px;
+    z-index: 99;
+}
+
+#myCanvas{
+    font-size: 10px
+}
+
+#card-header-1{
+    background: url("../images/quizCard.jpg");
+    /* margin-right: -200px; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    height: 500px;
+
+    position: relative;
+}
+
+.scoreBox{
+    background-color: rgb(250,145,176);
+}
