@@ -17,36 +17,51 @@ body , html{
 }
 
 .jumbotron-fluid { 
-    background: url("../images/logo_retina.png");
+    background: url("../images/logo_noTxt_2.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 
-    /* position: fixed; */
     /* width: 1400px;; */
     height: 600px;
     z-index: 99;
+
+    position: relative;
+
 }
 
 #myCanvas{
     font-size: 10px;
-    width: 100%;
-    text-align: center;
-    background-color: white;
+    /* width: 120%;
+    text-align: center; */
+    /* background-color: white; */
+    position: absolute;
+    right: 0;
 }
 
-#card-header-1{
+#card-quiz-area{
     background: url("../images/quizCard.jpg");
     /* margin-right: -200px; */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
+    padding-right: 20%;
     height: 500px;
 
     position: relative;
 }
 
+#card-signIn-area{
+    background: url("../images/signIn.jpg");
+    /* margin-right: -200px; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-right: 20%;
+    height: 500px;
+}
+
 .scoreBox{
     background-color: rgb(250,145,176);
+    /* background-color: #c9b9ee */
 }

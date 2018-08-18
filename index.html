@@ -34,7 +34,7 @@
 <body>  
    
         
-        <div class="row welcome ">
+        <!-- <div class="row welcome "> -->
                 <!-- <div class="col-md-1"></div> -->
                 <!-- Jumbotron -->
                 <div class="col-md-12">
@@ -43,26 +43,47 @@
                                 <h1 class="text-center"></h1>
                                 <p class="lead text-center"></p>
                             </div>
+                            <canvas id="myCanvas"></canvas>
                         </div>
                 </div>
                 <!-- <div class="col-md-3 side"></div> -->
-            </div>
-            <canvas id="myCanvas"></canvas>
+            <!-- </div> -->
+            
     <div class="container ">
                 <br>
-                
+
+
+                <div class="row mt-3 mb-3">  
+                    <!-- <div class="col-md-2 bg-success text-center rounded-circle mt-5 pt-3" id="requestPlay"> Click to play</div> -->                      
+                        <!-- <div class="col-md-1"></div>                       -->
+                        <!-- Player 2 -->
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header bg-primary text-light text-center" value = "2">SignIn Area</div>
+                                <div class="card-body" id="card-signIn-area"> 
+                                    <!-- <form>    
+                                        <label for="message-box"></label>
+                                        <input type="text" class="form-control border-none" id="message-box">  
+                                    </form>  -->                                    
+                                    <!-- <p>test</p>
+                                    <p>test</p>
+                                    <p>test</p>
+                                    <p>test</p>                                    -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="col-md-3"></div> -->
+                </div>                
                 
                 <div class="row mt-3 mb-3">
                 	<!-- Empty Col -->
-                    <!-- <div class="col-md-1"></div>                	 -->
+                    <!-- <div class="col-md-1"></div> -->
                     <!-- Player 1 -->
                     <div class="col-md-9">
                         <div class="card">
                             <div class="card-header bg-primary text-light text-center " value = "1" id="card-header-1" >Quiz Area
-                                
-
                             </div>
-                            <div class="card-body"> 
+                            <div class="card-body" id="card-quiz-area"> 
                                 <!-- <form>    
                                     <label for="quiz-name"></label>
                                     <input type="text" class="form-control" id="quiz-area">    
@@ -71,17 +92,35 @@
                                 <!-- <p>test</p>
                                 <p>test</p>
                                 <p>test</p>
-                                <p>test</p>                                                             -->
+                                <p>test</p>  -->
                             </div>
                         </div>
                     </div>
                     <!-- Empty Col -->
                     <div class="col-md-1"></div> 
                     <div class="col-md-2 scoreBox">
-                        <div class="row" >Top champios
-                            <h3 id="top-champios">...</h3></div>
-                        <div class="row">Your Score
-                            <h3 id="your-score">...</h3></div>
+                        <div class="row" >
+                            <div class="col-md-12">
+                                <div class="card-header bg-primary text-light text-center">Top champios</div>     
+                                <div class="card-body" id="top-champios">Mr superWord : 10000 points</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card-header bg-primary text-light text-center">Your Score</div>
+                                <div class="card-body" id="your-score">5 point
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-md-12">
+                                    <div class="card-header bg-primary text-light text-center">Timer</div>
+                                    <div class="card-body" id="time-left">9:00
+                                        <img src="https://media.giphy.com/media/3oz8xKaR836UJOYeOc/giphy.gif">
+    
+                                    </div>
+                                </div>
+                        </div>
                     </div> 
                 </div> 
                 <div class="row mt-3 mb-3">  
@@ -91,7 +130,7 @@
                     <div class="col-md-9">
                         <div class="card">
                             <div class="card-header bg-primary text-light text-center" value = "2">Message Area</div>
-                            <div class="card-body"> 
+                            <div class="card-body scoreBox" id="card-message-area"> 
                                 <!-- <form>    
                                     <label for="message-box"></label>
                                     <input type="text" class="form-control border-none" id="message-box">  
@@ -100,7 +139,7 @@
                                 <!-- <p>test</p>
                                 <p>test</p>
                                 <p>test</p>
-                                <p>test</p>                                    -->
+                                <p>test</p> -->
                             </div>
                         </div>
                     </div>
@@ -110,10 +149,6 @@
         
             </div>
 
-
-
-
-        
             <!-- Including quiz.js -->
             <!-- <script src="datamuseAPI.js"></script> -->
       <!-- Link to bubbles.js-->
@@ -126,15 +161,13 @@
             var yellow  = [255 , 250 , 12];
             
             var colors = [red, green , blue , yellow];
-            var bubleText = "Welcome";
+            var bubleText = "LYRI QUIZ";
             // bubleText.html("HEY  YOU")
             console.log(bubleText);
             drawName(bubleText , colors);
             bounceBubbles();
             
             </script>
-
-
 
 </body>
 </html>
