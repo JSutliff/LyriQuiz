@@ -29,7 +29,10 @@ body , html{
 }
 
 #myCanvas{
-    font-size: 10px
+    font-size: 10px;
+    width: 100%;
+    text-align: center;
+    background-color: white;
 }
 
 #card-header-1{
