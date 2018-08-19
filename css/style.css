@@ -12,10 +12,6 @@ body , html{
    
 }
 
-.welcome{    
-    /* background-color:rgb(236, 236, 185) */
-}
-
 .jumbotron-fluid { 
     background: url("../images/logo_noTxt_2.jpg");
     background-position: center;
@@ -27,6 +23,7 @@ body , html{
     z-index: 99;
 
     position: relative;
+    clear: both;
 
 }
 
@@ -36,8 +33,38 @@ body , html{
     text-align: center; */
     /* background-color: white; */
     position: absolute;
+    float: right;
     right: 0;
+    top: 0;
+    /* max-width: 60%; */
 }
+#head-giphy-bird{
+    position: absolute;
+    float: left;
+    bottom: 0;
+    left: 100%;
+    height: 30%;
+    -webkit-animation-name: birdWalk;
+    -webkit-animation-duration: 15s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+}
+@keyframes birdWalk {
+    0%   {left:0;}
+    /* 25%  {left:30%;}
+    50%  {left:50%;}
+    75%  {left:70%;} */
+    100% {left: 100%;}
+}
+
+#head-giphy-dance{
+    position: absolute;
+    float: right;
+    bottom: 0;
+    right: 5%;
+    /* left: 80%; */
+    height: 40%;
+}
+
 
 #card-quiz-area{
     background: url("../images/quizCard.jpg");
@@ -46,13 +73,31 @@ body , html{
     background-repeat: no-repeat;
     background-size: cover;
     padding-right: 20%;
-    height: 500px;
+    height: 600px;
 
     position: relative;
+    clear:both;
+
+    font-size: 40px;
+    font-style: bold;
+    color: white 
+}
+
+.question{
+    /* position: absolute;
+    float: left; */
+    left: 5%;
+    
+}
+.answer{
+    /* position: absolute;
+    float: left; */
+    left: 60%; 
+  
 }
 
 #card-signIn-area{
-    background: url("../images/signIn.jpg");
+    background: url("../images/signIn_noSubmit.jpg");
     /* margin-right: -200px; */
     background-position: center;
     background-repeat: no-repeat;
@@ -69,7 +114,8 @@ body , html{
 }
 
 #user-name-box {
-    background-color:yellow;
+    /* for debugging purpose */
+    /* background-color:yellow; */
 
     position: absolute;
     
@@ -78,7 +124,8 @@ body , html{
     left: 4%  
 }
 #password-box {
-    background-color:yellow;
+     /* for debugging purpose */
+    /* background-color:yellow; */
 
     position: absolute;
     
@@ -93,3 +140,4 @@ body , html{
     max-width: 32%;
     left: 4%  
 }
+
