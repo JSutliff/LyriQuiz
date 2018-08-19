@@ -68,37 +68,23 @@ body , html{
 
 #card-quiz-area{
     background: url("../images/quizCard.jpg");
-    /* margin-right: -200px; */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding-right: 20%;
+    
     height: 600px;
 
-    position: relative;
-    clear:both;
-
-    font-size: 40px;
+    font-size: 30px;
     font-style: bold;
-    color: white 
-}
+    color: white; 
 
-.question{
-    /* position: absolute;
-    float: left; */
-    left: 5%;
-    
 }
-.answer{
-    /* position: absolute;
-    float: left; */
-    left: 60%; 
-  
+.custom-control-input{
+    top: 4;
 }
 
 #card-signIn-area{
     background: url("../images/signIn_noSubmit.jpg");
-    /* margin-right: -200px; */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -110,13 +96,9 @@ body , html{
 
 .scoreBox{
     background-color: rgb(250,145,176);
-    /* background-color: #c9b9ee */
 }
 
 #user-name-box {
-    /* for debugging purpose */
-    /* background-color:yellow; */
-
     position: absolute;
     
     top: 44%;

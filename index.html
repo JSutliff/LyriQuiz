@@ -30,6 +30,18 @@
    
       <!-- Link to css-->
       <link rel="stylesheet" href="css/style.css">
+
+      <!-- <style>
+            div{
+                background-color: #eee;
+                min-height: 100px;
+                border: 1px black solid;
+            }
+            div:nth-child(odd){
+                background-color: #777;
+            }
+            </style> -->
+
 </head>
 <body>  
    
@@ -82,28 +94,32 @@
                 </div>                
                 
                 <div class="row mt-3 mb-3">
-                	<!-- Empty Col -->
-                    <!-- <div class="col-md-1"></div> -->
-                    <!-- Player 1 -->
                     <div class="col-md-9">
-                        <div class="card">
-                            <div class="card-header bg-primary text-light text-center " value = "1" id="card-header-1" >Quiz Area
+                        <div class="row">
+                            <div class="col-md-12 card-header bg-primary text-light text-center">
+                                <div id="card-header-1" >Fill in the blank</div>
                             </div>
-                            <div class="card-body card-body-lg" id="card-quiz-area"> 
-                                <div class="question float-left">
-                                    dance me to the end of ----
+                        </div> 
+                        
+                        <div class="row pt-5" id="card-quiz-area">
+                            <!-- <div id="card-quiz-area"> -->
+                            <div class="col-md-5 question">
+                                dance me to the end of ----
+                            </div>
+                            <div class="col-md-2"></div>
+                            <div class="col-md-5 answer">                                
+                                <div class="custom-control custom-radio ">
+                                    <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input ">
+                                    <label class="custom-control-label " for="customRadio1">life</label>
                                 </div>
-                                <div class="answer float-right">
-                                    <div class="custom-control custom-radio">
-                                        <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input float-right">
-                                        <label class="custom-control-label float-left" for="customRadio1">Bart</label>
-                                    </div>
-                                    <div class="custom-control custom-radio">
-                                        <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input float-right">
-                                        <label class="custom-control-label float-left" for="customRadio2">Love</label>
-                                    </div>
-                                </div>
-
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input ">
+                                    <label class="custom-control-label " for="customRadio2">Love</label>
+                                </div>                            
+                            </div>
+                            <!-- </div> -->
+                        </div>
+                    
 
 
                                 <!-- <form class="answer">
@@ -116,8 +132,6 @@
                                 <p>test</p>
                                 <p>test</p>
                                 <p>test</p>  -->
-                            </div>
-                        </div>
                     </div>
                     <!-- Empty Col -->
                     <div class="col-md-1"></div> 
@@ -155,10 +169,10 @@
                         <div class="card">
                             <div class="card-header bg-primary text-light text-center" value = "2">Message Area</div>
                             <div class="card-body scoreBox" id="card-message-area"> 
-                                <!-- <form>    
+                                <form>    
                                     <label for="message-box"></label>
                                     <input type="text" class="form-control border-none" id="message-box">  
-                                </form>  -->
+                                </form> 
                                 
                                 <!-- <p>test</p>
                                 <p>test</p>
