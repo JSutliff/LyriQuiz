@@ -24,7 +24,13 @@ body , html{
 
     position: relative;
     clear: both;
+}
 
+#logIn{
+    position: absolute;
+    float: right;
+    right: 0;
+    top: 0;
 }
 
 #myCanvas{
