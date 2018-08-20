@@ -74,11 +74,21 @@ h1, h2,h3{
     position: relative;
 
 }
-.custom-control-input{
-    top: 4;
-    /* z-index: 99;
-    opacity: 1; */
+/* .custom-control{
+    position: relative;
+    clear: both;
 }
+.custom-control-input{
+    position: absolute;
+    float: left;
+    top: 4;
+    z-index: 99;
+    opacity: 1;
+}
+.custom-control-label{
+    position: absolute;
+    float: right;
+} */
 
 #card-signIn-area{
     background: url("../images/signIn_720px_noTxt.jpg");
