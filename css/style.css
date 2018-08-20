@@ -1,0 +1,139 @@
+body , html{
+    background: url("../images/lights.jpg");
+    
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+
+    font-family: 'Hanalei Fill', cursive;
+	font-size: 20px;
+    font-style: bold;   
+}
+
+
+h1, h2,h3{
+    font-family: 'Hanalei Fill', cursive;
+    /* color: white; */
+}
+#validation-box{
+    background-color: #c9b9ee;
+}
+
+
+
+.jumbotron-fluid { 
+    background: url("../images/logo_noTxt_2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    height: 600px;
+    z-index: 99;
+
+    position: relative;
+    clear: both;
+}
+
+#logIn{
+    position: absolute;
+    float: right;
+    right: 0;
+    top: 0;
+}
+
+#myCanvas{
+    font-size: 10px;
+    position: absolute;
+    float: right;
+    right: 0;
+    top: 0;
+}
+
+
+#head-giphy-dance{
+    position: absolute;
+    float: right;
+    bottom: 0;
+    right: 5%;
+    height: 40%;
+}
+
+
+#card-quiz-area{
+    background: url("../images/quizCard.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    height: 600px;
+
+    font-size: 30px;
+    font-style: bold;
+    color: white; 
+
+    position: relative;
+
+}
+.custom-control-input{
+    top: 4;
+    /* z-index: 99;
+    opacity: 1; */
+}
+
+#card-signIn-area{
+    background: url("../images/signIn_720px_noTxt.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-right: 20%;
+    height: 500px;
+
+    position: relative;
+}
+#sign-in-form{
+
+    position: absolute;    
+    bottom: 5%;
+}
+#googl-gif{
+    position: absolute;    
+    float: right;
+    top: -6%;
+    right:0;
+    height: 20%;
+    
+}
+#google-gif_2{
+    /* position: absolute;    
+    float: right; */
+    /* top: 5%;
+    right:5%; */
+    height: 20%;
+}
+
+
+.answer{
+    position: relative;
+}
+
+#time-block{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20%;
+    /* height: 2% */
+}
+
+
+#submit-answer{
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+}
+
+.scoreBox{
+    background-color: rgb(250,145,176);
+}
+
+
+
