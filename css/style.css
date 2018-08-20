@@ -71,9 +71,13 @@ h1, h2,h3{
     font-style: bold;
     color: white; 
 
+    position: relative;
+
 }
 .custom-control-input{
     top: 4;
+    /* z-index: 99;
+    opacity: 1; */
 }
 
 #card-signIn-area{
@@ -111,6 +115,16 @@ h1, h2,h3{
 .answer{
     position: relative;
 }
+
+#time-block{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20%;
+    /* height: 2% */
+}
+
+
 #submit-answer{
     position: absolute;
     bottom: 5%;
