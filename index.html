@@ -55,7 +55,7 @@
         <div class="row mt-3 mb-3">  
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header bg-primary text-light text-center" value = "2">SignIn Area</div>
+                    <div class="card-header bg-info text-light text-center" value = "2">SignIn Area</div>
                     <div class="card-body" id="card-signIn-area"> 
                         <h2>Sign in with your Google acount</h2> 
                         <img src="images/google_gif2.gif" id="google-gif_2">
@@ -83,7 +83,7 @@
         <div class="row mt-3 mb-3">
             <div class="col-md-9">
                 <div class="row">
-                    <div class="col-md-12 card-header bg-primary text-light text-center">
+                    <div class="col-md-12 card-header bg-info text-light text-center">
                         <div id="card-header-1" >Sing the Song in your head and Fill in the blank</div>
                     </div>
                 </div> 
@@ -91,26 +91,26 @@
                 <div class="row pt-5" id="card-quiz-area">
 
                     <div id="time-block" class="text-center border-primary">
-                        <p>Time</p>
-                        <div class="card-body pt-0" id="time-left">9:00
+                        <p class="lead">Time</p>
+                        <div class="card-body pt-0" id="time-left"><p class="lead">9:00</p>
                             <img src="images/timer_2.gif">
                         </div>
                     </div>
-                    <div class="col-md-5 question">
-                        dance me to the end of ----
+                    <div class="col-md-6 question">
+                        <p class="lead">dance me to the end of ----</p>
+                        
                     </div>
-                    <div class="col-md-2"></div>
-                    <div class="col-md-5 answer"> 
+                    <!-- <div class="col-md-2"></div> -->
+                    <div class="col-md-6 answer"> 
                         
                         <div class="custom-control custom-radio ">
-                            <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input ">
-                            <label class="custom-control-label " for="customRadio1">life</label>
+                            <input type="radio" id="customRadio1" name="customRadio">
+                            <label for="customRadio1"><p class="lead">life</p></label>
                         </div>
-                        <div class="custom-control custom-radio">
-                            <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input ">
-                            <label class="custom-control-label " for="customRadio2">Love</label>
+                        <div class="custom-control custom-radio ">
+                            <input type="radio" id="customRadio2" name="customRadio">
+                            <label for="customRadio2"><p class="lead">love</p></label>
                         </div>
-                        
                         <button type="submit" class="btn btn-primary" id="submit-answer">Submit</button>      
 
                     </div>
@@ -121,21 +121,21 @@
             <div class="col-md-2 scoreBox">
                 <div class="row" >
                     <div class="col-md-12">
-                        <div class="card-header bg-primary text-light text-center">Top Scores</div> 
+                        <div class="card-header bg-info text-light text-center">Top Scores</div> 
                         <img src="https://media.giphy.com/media/l46Cy1rHbQ92uuLXa/giphy.gif" id="stats">    
                         <div class="card-body" id="top-champios">Mr superWord : 10000 points</div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="card-header bg-primary text-light text-center">Your Score</div>
+                        <div class="card-header bg-info text-light text-center">Your Score</div>
                         <div class="card-body" id="your-score">5 point
                         </div>
                     </div>
                 </div>
                 <!-- <div class="row"> -->
                         <!-- <div class="col-md-12"> -->
-                            <!-- <div class="card-header bg-primary text-light text-center">Timer</div>
+                            <!-- <div class="card-header text-light text-center">Timer</div>
                             <div class="card-body" id="time-left">9:00
                                 <img src="images/timer_2.gif">
 
@@ -147,7 +147,7 @@
         <div class="row mt-3 mb-3">  
             <div class="col-md-9">
                 <div class="card">
-                    <div class="card-header bg-primary text-light text-center" value = "2">Message Area</div>
+                    <div class="card-header bg-info text-light text-center" value = "2">Message Area</div>
                     <div class="card-body scoreBox" id="card-message-area"> 
                         <form>    
                             <label for="message-box"></label>

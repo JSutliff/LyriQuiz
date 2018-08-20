@@ -74,21 +74,7 @@ h1, h2,h3{
     position: relative;
 
 }
-.custom-control{
-    position: relative;
-    clear: both;
-}
-.custom-control-input{
-    position: absolute;
-    float: left;
-    top: 4;
-    z-index: 99;
-    opacity: 1;
-}
-.custom-control-label{
-    position: absolute;
-    float: right;
-}
+
 
 #card-signIn-area{
     background: url("../images/signIn_720px_noTxt.jpg");
@@ -130,7 +116,7 @@ h1, h2,h3{
 
 #time-block{
     position: absolute;
-    top: 0;
+    top: 5%;
     right: 0;
     width: 20%;
     /* height: 2% */
@@ -147,5 +133,8 @@ h1, h2,h3{
     background-color: rgb(250,145,176);
 }
 
+.btn{
+    background-color: #23adf0;
+}
 
 
