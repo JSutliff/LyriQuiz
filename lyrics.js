@@ -60,12 +60,17 @@ function showNextQuestion(){
       url: queryURL,
       method: "GET",
     }).then(function(response){
-      //get the number of tracks in the response
-      var limit = JSON.parse(response).message.body.track_list.length;
-      //find a random index < number of tracks(limit)
+
+      var trackList = JSON.parse(response).message.body.track_list;
+                    
+      var cleanLyricsList = trackList.filter(function(elem) {
+        return elem.track.explicit === 0;
+      });
+
+      var limit = cleanLyricsList.length;
       var randomIndex = Math.floor(Math.random() * limit);
-      //get the trackId of the random track selected
-      var trackId = JSON.parse(response).message.body.track_list[randomIndex].track.track_id;
+      
+      var trackId = cleanLyricsList[randomIndex].track.track_id;
 
       queryURL = "http://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=" + trackId + "&apikey=" + apiKey;
       $.ajax({
