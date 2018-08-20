@@ -1,15 +1,15 @@
 var artistId;
-function preFilter() {
+// function preFilter() {
   jQuery.ajaxPrefilter(function (options) {
     if (options.crossDomain && jQuery.support.cors) {
       options.url = 'https://cors-anywhere.herokuapp.com/' + options.url;
     }
   });
-} 
+// } 
 
 $(document).ready(function () {
 
-  preFilter();
+  // preFilter();
 
     var apiKey = "a731b06ce37dbb83ac69163abef82fef";
     // var queryURL = "http://api.musixmatch.com/ws/1.1/artist.search?q_artist=" + artist + "&apikey=" + apiKey;
@@ -22,7 +22,7 @@ $(document).ready(function () {
     //     console.log(JSON.parse(response).message.body.artist_list[0].artist.artist_id);
     //     artistId = JSON.parse(response).message.body.artist_list[0].artist.artist_id;
 
-    //     preFilter();
+        // preFilter();
     //     queryURL = "http://api.musixmatch.com/ws/1.1/artist.albums.get?artist_id=" + artistId + "&apikey=" + apiKey;
     //         $.ajax({
     //           url: queryURL,
@@ -35,7 +35,7 @@ $(document).ready(function () {
     //           var albumId = JSON.parse(response).message.body.album_list[randomIndex].album.album_id;
     //           console.log(albumId);
 
-              preFilter();
+              // preFilter();
 
               queryURL = "http://api.musixmatch.com/ws/1.1/chart.tracks.get?page_size=100&f_has_lyrics=1&apikey=" + apiKey;
                   $.ajax({
@@ -44,13 +44,21 @@ $(document).ready(function () {
                 }).then(function(response){
                     $("#output").text(JSON.parse(response));
                     console.log(response);
-                    var limit = JSON.parse(response).message.body.track_list.length;
+                    var trackList = JSON.parse(response).message.body.track_list;
+                    var limit = trackList.length;
                     console.log(limit);
+                    var cleanLyricsList = trackList.filter(function(elem) {
+                      return elem.track.explicit === 0;
+                    });
+                    console.log('this is the list', cleanLyricsList)
                     var randomIndex = Math.floor(Math.random() * limit);
-                    var trackId = JSON.parse(response).message.body.track_list[randomIndex].track.track_id;
-                    console.log(trackId);
+                    
+                    var trackId = cleanLyricsList[randomIndex].track.track_id;
+                    // = JSON.parse(response).message.body.track_list[randomIndex].track.track_id;
 
-                    preFilter();
+                  
+
+                    // preFilter();
 
                     queryURL = "http://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=" + trackId + "&apikey=" + apiKey;
                         $.ajax({
@@ -61,7 +69,7 @@ $(document).ready(function () {
                           console.log(response);
                           console.log(JSON.parse(response).message.body.lyrics.lyrics_body);
 
-                          preFilter();
+                          // preFilter();
                       
                           apiKey = "a731b06ce37dbb83ac69163abef82fef"
                           var word = "rain"
@@ -83,5 +91,3 @@ $(document).ready(function () {
 
 //   });
 // });
-
-
