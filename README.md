@@ -12,10 +12,10 @@ of lyrics from the current top 100 songs.
 <!-- [What the user will see](the link to the deployed site) -->
 [Lyric-Quiz](https://jsutliff.github.io/LyriQuiz/)
 
-# Images
+<!-- # Images
 <!-- take a picture of the image and add it into the readme  -->
 <!-- ![image title](path or link to image) -->
-[screen shot of completed assignment](assets/images/screenShot.png)
+<!-- [screen shot of completed assignment](assets/images/screenShot.png) --> 
 
 
 <img src="assets/images/gifGenScreenShot.jpeg">
