@@ -7,7 +7,7 @@ We utilized our skillsets in HTML5, CSS3, Javascript, JQuery, Bootstrap, Firebas
 and AJAX to make a lyrical quiz. The website allows friends to test their knowledge
 of lyrics from the current top 100 songs. 
 
-# Link to deployed site
+## Link to deployed site
 <!-- make a link to the deployed site --> 
 <!-- [What the user will see](the link to the deployed site) -->
 [Lyric-Quiz](https://jsutliff.github.io/LyriQuiz/)
@@ -16,20 +16,32 @@ of lyrics from the current top 100 songs.
 <!-- take a picture of the image and add it into the readme  -->
 <!-- ![image title](path or link to image) -->
 <!-- [screen shot of completed assignment](assets/images/screenShot.png) --> 
+## Images
+![Lyric-Quiz]()
 
-
-<img src="assets/images/gifGenScreenShot.jpeg">
-# technology used
+## Technologies used
 <!-- make a list of technology used -->
 <!-- what you used for this web app, like html css -->
-- HTML5
-- jQuery
-  -AJAX API Calls
-- CSS3
-- Bubble.JS
-- Firebase
-- Bootstrap
-
+1. HTML5
+2. CSS3/ Bootstrap/ Bubble.JS
+  * grid layout
+3. jQuery
+  * Event handling
+  * Dynamically create new elements
+  * Appending and removing newly created elements to other html elements
+  * Providing attributes to the newly dynamically created elements
+4. AJAX API Calls
+  * Building querystrings for the AJAX call to APIs
+  * Utilizing the response received from the API
+5. Firebase
+  * Keeping data persistent
+  * Configuring and initializing firebase 
+  * Event handlers(child_added, value)
+  * Saving and retreiving data from the application to the database
+6. Github
+  * version control working with collaborators
+  * Branching from master branch
+  * Merging back to master branch
 
 <!-- 
 1. First ordered list item
@@ -44,7 +56,7 @@ of lyrics from the current top 100 songs.
 # code snippets
 <!-- put snippets of code inside ``` ``` so it will look like code -->
 <!-- if you want to put blockquotes use a > -->
-
+<!------------JASON--------------------------------->
 ```javascript
 function showNextQuestion(){
 
@@ -87,13 +99,41 @@ function showNextQuestion(){
 This code shows interaction with elements on the DOM and ajax calls being performed.
 We also implemented .filter to remove any explicit lyrics from out game. If the user
 has answered less than 10 questions asjax call is made to return another set of lyrics. 
+<!----------------------------Jason-------------------------------------------->
+
+<!------------ajita--------------------------------->
+```javascript
+
+```
+# Explanation of code
+
+<!----------------------------ajita-------------------------------------------->
+
+<!------------Andrew--------------------------------->
+```javascript
+
+```
+# Explanation of code
+
+<!----------------------------Andrew-------------------------------------------->
+
+<!------------nasib--------------------------------->
+```javascript
+
+```
+# Explanation of code
+
+<!----------------------------nasib-------------------------------------------->
 
 # Learning points
 <!-- Learning points where you would write what you thought was helpful -->
-This assignment was a lot of fun. It was challenging yet rewarding and really highlights
-some of the posibilites for programming with an API. Making the ajax call and working 
-with someone elses data is a lot of fun and a new experience for me. I look forward
-to learning more and implementing future use cases. 
+1. Working with Github with collaborators was a new learning experience
+  * Branching and Merging with master branch
+  * Communicating when changes made to master
+2. Agile way of application development
+  * Communicationg within group members
+  * Updating members every day about the progress
+  * Making changes as they came
 
 # Author 
 <!-- make a link to the deployed site and have your name as the link -->
