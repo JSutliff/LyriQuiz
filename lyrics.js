@@ -16,13 +16,13 @@ firebase.initializeApp(config);
 var database = firebase.database();
 
 
-function preFilter() {
-    jQuery.ajaxPrefilter(function (options) {
-      if (options.crossDomain && jQuery.support.cors) {
-        options.url = 'https://cors-anywhere.herokuapp.com/' + options.url;
-      }
-    });
+
+jQuery.ajaxPrefilter(function (options) {
+  if (options.crossDomain && jQuery.support.cors) {
+    options.url = 'https://cors-anywhere.herokuapp.com/' + options.url;
   }
+});
+
   
 function onlyAlphabets(word){
   for(var i =0;i<word.length; i++){
@@ -53,7 +53,6 @@ function showNextQuestion(){
   //append the question to the question area on the page
   $("#card-quiz-area .question").html("");
   if(questionCount < 11){
-    preFilter();
     //api call to get lyrics of a random song from chart top 100 tracks 
     var apiKey = "a731b06ce37dbb83ac69163abef82fef";
     queryURL = "http://api.musixmatch.com/ws/1.1/chart.tracks.get?page_size=100&f_has_lyrics=1&apikey=" + apiKey;
@@ -67,8 +66,6 @@ function showNextQuestion(){
       var randomIndex = Math.floor(Math.random() * limit);
       //get the trackId of the random track selected
       var trackId = JSON.parse(response).message.body.track_list[randomIndex].track.track_id;
-
-      preFilter();
 
       queryURL = "http://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=" + trackId + "&apikey=" + apiKey;
       $.ajax({
@@ -126,8 +123,6 @@ function showNextQuestion(){
         //append the question to the question area on the page
         $("#card-quiz-area .question").html(strOutput);
         //console.log(missingWord);
-      
-        preFilter();
 
         //api call to find similar sounding words as our missing word to create options for quiz
         apiKey = "a731b06ce37dbb83ac69163abef82fef"
