@@ -59,7 +59,14 @@
                     <div class="card-body" id="card-signIn-area"> 
                         <h2>Sign in with your Google acount</h2> 
                         <img src="images/google_gif2.gif" id="google-gif_2">
-                        <button type="submit" class="btn btn-primary" id="google-logIn">Log In</button>      
+                        <button type="submit" class="btn btn-primary" id="google-logIn">Log In</button>  
+                        
+                        <div > Welcom to our page <span id="name"> Andrew </span> </div>
+                        <div>Pick an alias to start the game </div>
+                        <form class="form-inline">
+                                <input type="text" class="form-control border-none" id="alias-box">                        
+                                <button type="submit" class="btn btn-primary mb-2">Start</button>
+                            </form>
                     </div>
                 </div>
             </div>
@@ -68,21 +75,21 @@
         <div class="row mt-3 mb-3">
             <div class="col-md-2"></div>
             <div class="col-md-8">
-                <div class=" card border-5 border-primary text-light" id= "validation-box">
-                    <div class="card-header bg-info text-light text-center" id="card-header-1" > Welcom to our page <span id="name"> Andrew </span> </div>
-                    <div>Please pick an alias to start the game </div>
+                <!-- <div class=" card border-5 border-pr text-light" id= "validation-box"> -->
+                    <!-- <div class="card-header bg-info text-light text-center" id="card-header-1" > Welcom to our page <span id="name"> Andrew </span> </div>
+                    <div>Please pick an alias to start the game </div> -->
 
-                    <form class="form-inline">
+                    <!-- <form class="form-inline">
                         <input type="text" class="form-control border-none" id="alias-box">                        
                         <button type="submit" class="btn btn-primary mb-2">Start</button>
-                    </form>                     
-                </div>
+                    </form>                      -->
+                <!-- </div> -->
             </div>
             <div class="col-md-2"></div>
         </div>
                 
-        <div class="row mt-3 mb-3">
-            <div class="col-md-9">
+        <div class="row mt-3 mb-3" id="re-arrange">
+            <div class="col-md-12">
                 <div class="row">
                     <div class="col-md-12 card-header bg-info text-light text-center">
                         <div id="card-header-1" >Sing the Song in your head and Fill in the blank</div>
@@ -118,8 +125,8 @@
                 </div>           
             </div>
             <!-- Empty Col -->
-            <div class="col-md-1"></div> 
-            <div class="col-md-2 scoreBox">
+            <!-- <div class="col-md-1"></div>  -->
+            <!-- <div class="col-md-2 scoreBox">
                 <div class="row" >
                     <div class="col-md-12">
                         <div class="card-header bg-info text-light text-center">Top Scores</div> 
@@ -134,9 +141,39 @@
                         </div>
                     </div>
                 </div>
-            </div> 
+            </div>  -->
         </div> 
-        <div class="row mt-3 mb-3">  
+        
+
+        <div class="row mt-3 mb-3 ">
+            <!-- <div class="col-md-6 scoreBox">
+                <div class="row" > -->
+                    <div class="col-md-6 col-xs-6 scoreBox">
+                        <div class="card-header bg-info text-light text-center ">Top Scores</div> 
+                        <!-- <img src="https://media.giphy.com/media/l46Cy1rHbQ92uuLXa/giphy.gif" id="stats">     -->
+                        <div class="card-body text-center" id="top-champios">Mr superWord : 10000 points</div>
+                    </div>
+                <!-- </div> -->
+                <!-- <div class="row"> -->
+                    <div class="col-md-6 col-xs-6 scoreBox">
+                        <!-- <div class = "card "> -->
+                            <div class="card-header bg-info text-light text-center ">Your Score</div>
+                            <div class="card-body text-center" id="your-score">5 point</div>
+                        </div>
+                    <!-- </div> -->
+                <!-- </div> -->
+            <!-- </div>  -->
+        </div>
+
+        <div class="row mt-3 mb-3 "> 
+                <div class="col-md-4"></div>
+                <div class="col-md-4 text-center">
+                    <img src="https://media.giphy.com/media/l46Cy1rHbQ92uuLXa/giphy.gif" id="stats"> 
+                </div>    
+                <div class="col-md-4"></div>   
+            </div>
+
+        <!-- <div class="row mt-3 mb-3">  
             <div class="col-md-9">
                 <div class="card">
                     <div class="card-header bg-info text-light text-center" value = "2">Message Area</div>
@@ -149,7 +186,7 @@
                 </div>
             </div>
             <div class="col-md-3"></div>
-        </div>
+        </div> -->
         <div class="row mt-5 mb-3"></div>
     </div>
     <!-- <script src="datamuseAPI.js"></script> -->
