@@ -109,6 +109,8 @@ h1, h2,h3{
     /* top: 5%;
     right:5%; */
     height: 20%;
+    border: blue;
+    border-width: 10px;
 }
 
 
