@@ -90,7 +90,7 @@ body , html{
 }
 
 #card-signIn-area{
-    background: url("../images/signIn_noSubmit.jpg");
+    background: url("../images/signIn_720px_noTxt.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -98,6 +98,11 @@ body , html{
     height: 500px;
 
     position: relative;
+}
+#sign-in-form{
+
+    position: absolute;    
+    bottom: 5%;
 }
 
 .answer{
@@ -113,28 +118,5 @@ body , html{
     background-color: rgb(250,145,176);
 }
 
-#user-name-box {
-    position: absolute;
-    
-    top: 44%;
-    max-width: 32%;
-    left: 4%  
-}
-#password-box {
-     /* for debugging purpose */
-    /* background-color:yellow; */
 
-    position: absolute;
-    
-    top: 70%;
-    max-width: 32%;
-    left: 4%  
-}
-#submit{
-    position: absolute;
-    
-    top: 87%;
-    max-width: 32%;
-    left: 4%  
-}
 

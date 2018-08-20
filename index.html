@@ -4,32 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LyriQuiz!</title>
+
+    <!-- Link to css-->
+    <link rel="stylesheet" href="css/reset.css">
     <!-- jQuery -->
-	  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	  <!-- Bootstrap CDN-->
-	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-	  <!-- Including firebase.js-->
-	  <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
-	  <!-- Including moment.js-->
-      <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
-      
-      <!-- Link to UIKit-->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.10/css/uikit.min.css" />
-      
-      <!-- UIkit JS -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.10/js/uikit.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.10/js/uikit-icons.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- Bootstrap CDN-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- Including firebase.js-->
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    <!-- Including moment.js-->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
     
-      <!-- Link to alphabet.js-->
-      <script src="http://s3.amazonaws.com/codecademy-content/courses/hour-of-code/js/alphabet.js"></script>
+    <!-- Link to UIKit-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.10/css/uikit.min.css" />
+    
+    <!-- UIkit JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.10/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.10/js/uikit-icons.min.js"></script>
 
-      <!-- Link to bubbles.js-->
-      <script src="http://s3.amazonaws.com/codecademy-content/courses/hour-of-code/js/bubbles.js"></script>
+    <!-- Link to alphabet.js-->
+    <script src="http://s3.amazonaws.com/codecademy-content/courses/hour-of-code/js/alphabet.js"></script>
 
-   
-      <!-- Link to css-->
-      <link rel="stylesheet" href="css/style.css">
+    <!-- Link to bubbles.js-->
+    <script src="http://s3.amazonaws.com/codecademy-content/courses/hour-of-code/js/bubbles.js"></script>
+
+
+    <!-- Link to css-->
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>  
@@ -48,95 +51,108 @@
             <!-- <img src="images/littleGirl.gif" id="head-giphy-little"> -->
 
         </div>
-    </div>
+    </div>    
     <div class="container ">
         <br>
         <div class="row mt-3 mb-3">  
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header bg-primary text-light text-center" value = "2">SignIn Area</div>
-                    <div class="card-body" id="card-signIn-area"> 
+                    <!-- <div class="card-body" id="card-signIn-area"> 
                             <input type="text" class="form-control border-none" id="user-name-box" placeholder="username@google.com">  
                             <input type="password" class="form-control border-none" id="password-box" placeholder="password"> 
                             <button type="submit" class="btn btn-primary" id="submit">Submit</button>      
+                    </div> -->
+                    <div class="card-body" id="card-signIn-area"> 
+                        <h2>Sign in with your Google acount</h2>
+                        <form id="sign-in-form">
+                            <div class="form-group">
+                                <label for="user-name-box">Email address</label>
+                                <input type="text" class="form-control border-info border-5" id="user-name-box" placeholder="username@google.com"> 
+                            </div>
+                            <div class="form-group">
+                                <label for="password-box">Password</label>
+                                <input type="password" class="form-control border-info" id=" password-box" placeholder="password"> 
+                            </div>
+                            <button type="submit" class="btn btn-primary" id="submit">Submit</button>   
+                        </form>    
                     </div>
                 </div>
             </div>
         </div>                
                 
-    <div class="row mt-3 mb-3">
-        <div class="col-md-9">
-            <div class="row">
-                <div class="col-md-12 card-header bg-primary text-light text-center">
-                    <div id="card-header-1" >Sing the Song in your head and Fill in the blank</div>
-                </div>
-            </div> 
-            
-            <div class="row pt-5" id="card-quiz-area">
-                <div class="col-md-5 question">
-                    dance me to the end of ----
-                </div>
-                <div class="col-md-2"></div>
-                <div class="col-md-5 answer">                                
-                    <div class="custom-control custom-radio ">
-                        <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input ">
-                        <label class="custom-control-label " for="customRadio1">life</label>
+        <div class="row mt-3 mb-3">
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col-md-12 card-header bg-primary text-light text-center">
+                        <div id="card-header-1" >Sing the Song in your head and Fill in the blank</div>
                     </div>
-                    <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input ">
-                        <label class="custom-control-label " for="customRadio2">Love</label>
+                </div> 
+                
+                <div class="row pt-5" id="card-quiz-area">
+                    <div class="col-md-5 question">
+                        dance me to the end of ----
                     </div>
-                    
-                    <button type="submit" class="btn btn-primary" id="submit-answer">Submit</button>      
+                    <div class="col-md-2"></div>
+                    <div class="col-md-5 answer">                                
+                        <div class="custom-control custom-radio ">
+                            <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input ">
+                            <label class="custom-control-label " for="customRadio1">life</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input ">
+                            <label class="custom-control-label " for="customRadio2">Love</label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" id="submit-answer">Submit</button>      
 
-                </div>
-            </div>
-        
-        </div>
-        <!-- Empty Col -->
-        <div class="col-md-1"></div> 
-        <div class="col-md-2 scoreBox">
-            <div class="row" >
-                <div class="col-md-12">
-                    <div class="card-header bg-primary text-light text-center">Top champions</div> 
-                    <img src="https://media.giphy.com/media/l46Cy1rHbQ92uuLXa/giphy.gif" id="stats">    
-                    <div class="card-body" id="top-champios">Mr superWord : 10000 points</div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="card-header bg-primary text-light text-center">Your Score</div>
-                    <div class="card-body" id="your-score">5 point
                     </div>
-                </div>
+                </div>           
             </div>
-            <div class="row">
+            <!-- Empty Col -->
+            <div class="col-md-1"></div> 
+            <div class="col-md-2 scoreBox">
+                <div class="row" >
                     <div class="col-md-12">
-                        <div class="card-header bg-primary text-light text-center">Timer</div>
-                        <div class="card-body" id="time-left">9:00
-                            <img src="images/timer_2.gif">
-
+                        <div class="card-header bg-primary text-light text-center">Top champions</div> 
+                        <img src="https://media.giphy.com/media/l46Cy1rHbQ92uuLXa/giphy.gif" id="stats">    
+                        <div class="card-body" id="top-champios">Mr superWord : 10000 points</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card-header bg-primary text-light text-center">Your Score</div>
+                        <div class="card-body" id="your-score">5 point
                         </div>
                     </div>
-            </div>
+                </div>
+                <div class="row">
+                        <div class="col-md-12">
+                            <div class="card-header bg-primary text-light text-center">Timer</div>
+                            <div class="card-body" id="time-left">9:00
+                                <img src="images/timer_2.gif">
+
+                            </div>
+                        </div>
+                </div>
+            </div> 
         </div> 
-    </div> 
-    <div class="row mt-3 mb-3">  
-        <div class="col-md-9">
-            <div class="card">
-                <div class="card-header bg-primary text-light text-center" value = "2">Message Area</div>
-                <div class="card-body scoreBox" id="card-message-area"> 
-                    <form>    
-                        <label for="message-box"></label>
-                        <input type="text" class="form-control border-none" id="message-box">  
-                    </form> 
+        <div class="row mt-3 mb-3">  
+            <div class="col-md-9">
+                <div class="card">
+                    <div class="card-header bg-primary text-light text-center" value = "2">Message Area</div>
+                    <div class="card-body scoreBox" id="card-message-area"> 
+                        <form>    
+                            <label for="message-box"></label>
+                            <input type="text" class="form-control border-none" id="message-box">  
+                        </form> 
+                    </div>
                 </div>
             </div>
+            <div class="col-md-3"></div>
         </div>
-        <div class="col-md-3"></div>
+        <div class="row mt-5 mb-3"></div>
     </div>
-    <div class="row mt-5 mb-3"></div>
-</div>
     <!-- <script src="datamuseAPI.js"></script> -->
     <!-- Link to bubbles.js-->
     <script src="http://s3.amazonaws.com/codecademy-content/courses/hour-of-code/js/bubbles.js"></script>
