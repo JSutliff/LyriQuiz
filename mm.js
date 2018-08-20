@@ -16,6 +16,7 @@ $(document).ready(function () {
     }).then(function(response){
         $("#output").text(JSON.parse(response));
         console.log(JSON.parse(response));
+        console.log(JSON.parse(response). )
     }
 
     )
