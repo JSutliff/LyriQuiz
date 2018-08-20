@@ -60,7 +60,8 @@ h1, h2,h3{
 
 
 #card-quiz-area{
-    background: url("../images/quizCard.jpg");
+
+    background: url("../images/quizCard_2.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -74,11 +75,7 @@ h1, h2,h3{
     position: relative;
 
 }
-.custom-control-input{
-    top: 4;
-    /* z-index: 99;
-    opacity: 1; */
-}
+
 
 #card-signIn-area{
     background: url("../images/signIn_720px_noTxt.jpg");
@@ -104,11 +101,11 @@ h1, h2,h3{
     
 }
 #google-gif_2{
-    /* position: absolute;    
-    float: right; */
-    /* top: 5%;
-    right:5%; */
-    height: 20%;
+
+    height: 10%;
+    border: blue;
+    border-width: 10px;
+
 }
 
 
@@ -118,10 +115,10 @@ h1, h2,h3{
 
 #time-block{
     position: absolute;
-    top: 0;
+    top: 10%;
     right: 0;
     width: 20%;
-    /* height: 2% */
+
 }
 
 
@@ -135,5 +132,31 @@ h1, h2,h3{
     background-color: rgb(250,145,176);
 }
 
+.btn{
+    background-color: #23adf0;
+}
 
+#stats{
+    width: 60%;
+}
+
+@media screen and (max-width: 768px) {
+    .scoreBox{
+        width: 50%
+    }
+}
+@media screen and (max-width: 640px) {
+    .scoreBox{
+        width: 50%
+    }
+    .lead {
+        font-size: 60%;
+    }
+    .question{
+        width: 50%;
+    }
+    .answer{
+        width: 50%
+    }
+}
 
