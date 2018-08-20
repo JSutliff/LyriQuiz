@@ -7,9 +7,19 @@ body , html{
 
     font-family: 'Hanalei Fill', cursive;
 	font-size: 20px;
-    font-style: bold;
-   
+    font-style: bold;   
 }
+
+
+h1, h2,h3{
+    font-family: 'Hanalei Fill', cursive;
+    /* color: white; */
+}
+#validation-box{
+    background-color: #c9b9ee;
+}
+
+
 
 .jumbotron-fluid { 
     background: url("../images/logo_noTxt_2.jpg");

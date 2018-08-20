@@ -60,7 +60,7 @@
                         <h2>Sign in with your Google acount</h2> 
                         <img src="images/google_gif2.gif" id="google-gif_2">
 
-                        <form id="sign-in-form">
+                        <!-- <form id="sign-in-form">
                             <div class="form-group">
                                 <label for="user-name-box">Email address
                                 </label>
@@ -71,11 +71,26 @@
                                 <input type="password" class="form-control border-info" id=" password-box" placeholder="password"> 
                             </div>
                             <button type="submit" class="btn btn-primary" id="submit">Submit</button>   
-                        </form>    
+                        </form>     -->
                     </div>
                 </div>
             </div>
-        </div>                
+        </div>  
+        
+        <div class="row mt-3 mb-3">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <div class="col-md-12 text-light" id= "validation-box">
+                    <div id="card-header-1" > <h3>Welcom to our page <span id="name"> Andrew </span> Please pick an alias to start the game </h3></div>
+
+                    <form class="form-inline">
+                        <input type="text" class="form-control border-none" id="alias-box">                        
+                        <button type="submit" class="btn btn-primary mb-2">Start</button>
+                    </form>                     
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
                 
         <div class="row mt-3 mb-3">
             <div class="col-md-9">
@@ -165,5 +180,7 @@
         drawName(bubleText , colors);
         bounceBubbles();
     </script>
+    <script src=“https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js“></script>
+    <script src=“lyrics.js”></script>
 </body>
 </html>
