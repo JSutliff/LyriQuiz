@@ -1,6 +1,10 @@
+//stores the removed word from the lyrics
 var missingWord;
+//stores the score
 var score = 0;
+//reference to the timer
 var timer;
+//store the count of question number
 var questionCount =0;
 
 //CORs prefilter
