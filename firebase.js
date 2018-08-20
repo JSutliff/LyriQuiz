@@ -14,7 +14,7 @@
 
     var provider = new firebase.auth.GoogleAuthProvider();
 
-    $("#signin").on("click", function(e){
+    $("#logIn").on("click", function(e){
         console.log("click!");
         firebase.auth().signInWithRedirect(provider);
     })
@@ -34,7 +34,7 @@
                         database.ref("/users/" + uid).set({
                             username: username
                         })
-                        $("#usernameForm").remove();
+                        $("#usernameForm").hide();
                         var displayUsername = $("<h2>").text("Username: " + username);
                         $("body").append(displayUsername);
                     }
@@ -56,7 +56,7 @@
           // ...
           var user = result.user;
           console.log(user.displayName);
-          $("#signin").remove();
+          $("#logIn").hide();
           var displayWelcome = $("<h1>").text("Hello " + user.displayName)
           $("body").append(displayWelcome);
           console.log(user);
