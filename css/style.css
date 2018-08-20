@@ -74,7 +74,7 @@ h1, h2,h3{
     position: relative;
 
 }
-/* .custom-control{
+.custom-control{
     position: relative;
     clear: both;
 }
@@ -88,7 +88,7 @@ h1, h2,h3{
 .custom-control-label{
     position: absolute;
     float: right;
-} */
+}
 
 #card-signIn-area{
     background: url("../images/signIn_720px_noTxt.jpg");
