@@ -138,6 +138,6 @@ has answered less than 10 questions asjax call is made to return another set of 
 # Author 
 <!-- make a link to the deployed site and have your name as the link -->
 [Ajita Srivastava](https://ajitas.github.io/Basic-Portfolio/)
-[Andrew W.](https://andypants152.github.io/Responsive-Portfolio/)
+[Andrew M.](https://andypants152.github.io/Responsive-Portfolio/)
 [Jason P. Sutliff](https://jsutliff.github.io/Basic-Portfolio/)
 [Nasibeh N.](https://nasibnia.github.io/Bootstrap-Portfolio/)
