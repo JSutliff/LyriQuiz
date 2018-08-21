@@ -12,30 +12,27 @@
     var userRef = database.ref("/users");
     var uid;
     var exsistingNames = [];
-
+    $("#username-input").hide();
 
     var provider = new firebase.auth.GoogleAuthProvider();
 
     $("#google-logIn").on("click", function(e){
-        console.log("click!");
         firebase.auth().signInWithRedirect(provider);
     })
 
     $("body").on("click", "#createUsername", function (e) {
         e.preventDefault();
-        var username = $("#username").val();
+        var username = $("#alias-box").val();
         console.log(exsistingNames);
         if (exsistingNames.indexOf(username.toLowerCase()) === -1) {
             database.ref("/users/" + uid).set({
                 username: username,
                 score: 0
             })
-            $("#usernameForm").hide();
-            var displayUsername = $("<h2>").text("Username: " + username);
-            $("body").append(displayUsername);
+            $("#signIn").hide();
         }
         else {
-            $("#usernameLabel").text("Enter different username, that one is taken");
+            $("#usernameLabel").text("Enter different alias, that one is taken");
         }
 
     })
@@ -58,26 +55,16 @@
           var user = result.user;
           console.log(user.displayName);
           $("#google-logIn").hide();
-          var displayWelcome = $("<h1>").text("Hello " + user.displayName)
-          $("body").append(displayWelcome);
-          console.log(user);
+          $("#name").text(user.displayName);
           uid = user.uid;
 
           userRef.child(user.uid).once('value', function(snap){
               if(snap.val() == null){
-                var usernameForm = $("<form>").attr("id", "usernameForm");
-                var usernameLabel = $("<label>").attr("for", "username").attr("id", "usernameLabel").text("Enter a username");
-                var usernameInput = $("<input>").attr("type", "text").attr("id", "username");
-                var usernameSubmit = $("<button>").attr("type", "submit").attr("id", "createUsername").text("create username");
-                usernameForm.append(usernameLabel);
-                usernameForm.append(usernameInput);
-                usernameForm.append(usernameSubmit);
-                $("body").append(usernameForm);
+                $("#username-input").show();
               }
               else{
                   console.log(snap.val().username);
-                  var displayUsername = $("<h2>").text("Username: " + snap.val().username);
-                  $("body").append(displayUsername);
+                  
               }
           })
 
@@ -93,6 +80,10 @@
         // ...
       });
 
-      userRef.on("value", function(snap){
-
-      })
+      firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+          // User is signed in.
+        } else {
+          // No user is signed in.
+        }
+      });

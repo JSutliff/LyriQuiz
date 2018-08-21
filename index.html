@@ -13,7 +13,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <!-- Including firebase.js-->
-    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.4.0/firebase.js"></script>
     <!-- Including moment.js-->
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
     
@@ -52,7 +52,7 @@
     </div>    
     <div class="container ">
         <br>
-        <div class="row mt-3 mb-3">  
+        <div id="signIn" class="row mt-3 mb-3">  
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header bg-info text-light text-center" value = "2">SignIn Area</div>
@@ -61,23 +61,18 @@
                         <img src="images/google_gif2.gif" id="google-gif_2">
                         <button type="submit" class="btn btn-primary" id="google-logIn">Log In</button>  
                         
+                        <div id="username-input">
                         <div > Welcom to our page <span id="name"> Andrew </span> </div>
-                        <div>Please pick an alias to start the game </div>
+                        <div id="usernameLabel">Please pick an alias to start the game </div>
                         <form class="form-inline">
                                 <input type="text" class="form-control border-none" id="alias-box">                        
-                                <button type="submit" class="btn btn-primary mb-2">Start</button>
-                            </form>
+                                <button id="createUsername" type="submit" class="btn btn-primary mb-2">Start</button>
+                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>  
-        
-        <div class="row mt-3 mb-3">
-            <div class="col-md-2"></div>
-            <div class="col-md-8">
-            </div>
-            <div class="col-md-2"></div>
-        </div>
                 
         <div class="row mt-3 mb-3" id="re-arrange">
             <div class="col-md-12">
