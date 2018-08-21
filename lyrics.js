@@ -154,8 +154,6 @@ function showNextQuestion(){
             optionRadio.attr("id","customRadio"+parseInt(j+1));
             //give the radio button name of customRadio
             optionRadio.attr("name","customRadio");
-            //give the radio button class ofcustom-control-input
-            optionRadio.attr("class","custom-control-input");
             //give it the value from the option array
             optionRadio.val(options[j]);
 
