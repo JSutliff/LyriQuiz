@@ -199,8 +199,6 @@ function showNextQuestion(){
 }
 
 $(document).ready(function () {
-  
-  showNextQuestion();
 
   //when user clicks submit button to register their answer
   $("#submit-answer").on("click", function(event){
