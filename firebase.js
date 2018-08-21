@@ -10,7 +10,7 @@
     firebase.initializeApp(config);
     var database = firebase.database();
     var userRef = database.ref("/users");
-    var uid, score;
+    var uid, fbScore;
     var exsistingNames = [];
     $("#username-input").hide();
     $("#re-arrange").hide();
@@ -35,7 +35,7 @@
                     username: username,
                     score: 0
                 })
-                score = 0;
+                fbScore = 0;
                 $("#signIn").hide();
                 $("#re-arrange").show();
                 $("#scores").show();
@@ -93,7 +93,7 @@
           $("#google-logIn").hide();
           $("#name").text(user.displayName);
           uid = user.uid;
-          score = user.score;
+          fbScore = user.score;
 
           userRef.child(user.uid).once('value', function(snap){
               if(snap.val() == null){
@@ -101,7 +101,7 @@
               }
               else{
                 $("#signIn").hide();
-                  score = snap.val().score;
+                  fbScore = snap.val().score;
                   $("#re-arrange").show();
                   $("#scores").show();
                   showNextQuestion();                  
@@ -121,11 +121,11 @@
       });
 
       function updateScore(newScore){
-          if(newScore > score){
+          if(newScore > fbScore){
             database.ref("/users/" + uid).update({
                 score: newScore
             })
-            score = newScore;
+            fbScore = newScore;
             return true;
           }
           else{
