@@ -299,6 +299,6 @@ It picks the first 3 rhyming word from the response and then makes the 4 options
 ## Author 
 <!-- make a link to the deployed site and have your name as the link -->
 * [Ajita Srivastava](https://ajitas.github.io/Portfolio/)
-* [Andrew W.](https://andypants152.github.io/Responsive-Portfolio/)
+* [Andrew M.](https://andypants152.github.io/Responsive-Portfolio/)
 * [Jason P. Sutliff](https://jsutliff.github.io/Basic-Portfolio/)
 * [Nasibeh N.](https://nasibnia.github.io/Bootstrap-Portfolio/)
