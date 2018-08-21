@@ -46,14 +46,25 @@
         })
     })
 
+    userRef.orderByChild("score").limitToLast(3).on("value", function(snap){
+        console.log(snap.val());
+        var ranked = [];
+        snap.forEach(function(childSnap){
+            ranked.push([childSnap.val().username, childSnap.val().score]);
+        })
+        ranked.sort(function(a, b) {
+            return b[1] - a[1];
+        })
+        console.log(ranked);
+
+        $("#top-champions").html(ranked[0][0] + " " + ranked[0][1] + "<br>"
+                                +ranked[1][0] + " " + ranked[1][1] + "<br>"
+                                +ranked[2][0] + " " + ranked[2][1])
+    })
+
     firebase.auth().getRedirectResult().then(function(result) {
         if (result.credential) {
-          // This gives you a Google Access Token. You can use it to access the Google API.
-          var token = result.credential.accessToken;
-          console.log(token);
-          // ...
           var user = result.user;
-          console.log(user.displayName);
           $("#google-logIn").hide();
           $("#name").text(user.displayName);
           uid = user.uid;
@@ -64,7 +75,7 @@
               }
               else{
                   console.log(snap.val().username);
-                  
+                  $("#signIn").hide();
               }
           })
 
@@ -78,12 +89,4 @@
         // The firebase.auth.AuthCredential type that was used.
         var credential = error.credential;
         // ...
-      });
-
-      firebase.auth().onAuthStateChanged(function(user) {
-        if (user) {
-          // User is signed in.
-        } else {
-          // No user is signed in.
-        }
       });
