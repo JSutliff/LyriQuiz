@@ -13,6 +13,8 @@
     var uid, score;
     var exsistingNames = [];
     $("#username-input").hide();
+    $("#re-arrange").hide();
+    $("#scores").hide();
 
     var provider = new firebase.auth.GoogleAuthProvider();
 
@@ -22,21 +24,45 @@
 
     $("body").on("click", "#createUsername", function (e) {
         e.preventDefault();
-        var username = $("#alias-box").val();
-        console.log(exsistingNames);
-        if (exsistingNames.indexOf(username.toLowerCase()) === -1) {
-            database.ref("/users/" + uid).set({
-                username: username,
-                score: 0
-            })
-            score = 0;
-            $("#signIn").hide();
+        var username = $("#alias-box").val().trim();
+        if(!isValid(username)){
+            $("#erroralias").text(errorAlias)
+            $("#alias-box").val("");
         }
-        else {
-            $("#usernameLabel").text("Enter different alias, that one is taken");
+        else{
+            console.log(exsistingNames);
+            if (exsistingNames.indexOf(username.toLowerCase()) === -1) {
+                database.ref("/users/" + uid).set({
+                    username: username,
+                    score: 0
+                })
+                score = 0;
+                $("#signIn").hide();
+                $("#re-arrange").show();
+                $("#scores").show();
+            }
+            else {
+                $("#erroralias").text("Enter different alias, that one is taken");
+            }
         }
 
     })
+
+    var errorAlias = "";
+    function isValid(username) {
+        for (var i = 0; i < username.length; i++) {
+            if (username[i].toLowerCase() === username[i].toUpperCase()) {
+                errorAlias = "Alias can have only alphabets"
+                return false;
+            }
+        }
+        if (username.length < 4) {
+            errorAlias = "Alias should have a minimum length of 4"
+            return false;
+        }
+        return true;
+
+    }
 
     userRef.on("value", function(snap){
         snap.forEach(function(childSnap){
