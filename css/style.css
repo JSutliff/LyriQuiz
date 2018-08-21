@@ -60,6 +60,7 @@ h1, h2,h3{
 
 
 #card-quiz-area{
+
     background: url("../images/quizCard_2.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -100,9 +101,11 @@ h1, h2,h3{
     
 }
 #google-gif_2{
+
     height: 10%;
     border: blue;
     border-width: 10px;
+
 }
 
 
@@ -115,6 +118,7 @@ h1, h2,h3{
     top: 10%;
     right: 0;
     width: 20%;
+
 }
 
 
