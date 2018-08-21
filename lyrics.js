@@ -48,6 +48,7 @@ function showNextQuestion(){
   $("#card-quiz-area .answer .custom-radio").remove();
   //clear the question area on the page
   $("#card-quiz-area .question").html("");
+  $("#time-left").html("");
 
   //if number of questions has reached 10, end the quiz and store the score in database
   if(questionCount < 11){
@@ -72,6 +73,7 @@ function showNextQuestion(){
       
       //get the random track from the clean track list
       var trackId = cleanLyricsList[randomIndex].track.track_id;
+      var artist = cleanLyricsList[randomIndex].track.artist_name;
 
       //api call to get the lyrics of the selected track
       queryURL = "http://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=" + trackId + "&apikey=" + apiKey;
@@ -122,7 +124,7 @@ function showNextQuestion(){
           strOutput = strOutput + strArray[i] + " ";
         }
         //append the question to the question area on the page
-        $("#card-quiz-area .question").html(strOutput);
+        $("#card-quiz-area .question").html("Artist: "+artist+"<br>"+strOutput);
 
         //api call to find similar sounding words as our missing word to create options for quiz
         apiKey = "a731b06ce37dbb83ac69163abef82fef"
@@ -154,8 +156,6 @@ function showNextQuestion(){
             optionRadio.attr("id","customRadio"+parseInt(j+1));
             //give the radio button name of customRadio
             optionRadio.attr("name","customRadio");
-            //give the radio button class ofcustom-control-input
-            optionRadio.attr("class","custom-control-input");
             //give it the value from the option array
             optionRadio.val(options[j]);
 
@@ -196,13 +196,13 @@ function showNextQuestion(){
   }
   //if 10 questions are over, finish the quiz and update the score in database
   else{
+    $("#card-quiz-area .question").html("Quiz Over!!");
+    $("#submit-answer").attr("disabled","true");
     updateScore(score);
   }
 }
 
 $(document).ready(function () {
-  
-  showNextQuestion();
 
   //when user clicks submit button to register their answer
   $("#submit-answer").on("click", function(event){

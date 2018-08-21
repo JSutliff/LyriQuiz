@@ -13,7 +13,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <!-- Including firebase.js-->
-    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.4.0/firebase.js"></script>
     <!-- Including moment.js-->
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
     
@@ -25,10 +25,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.10/js/uikit-icons.min.js"></script>
 
     <!-- Link to alphabet.js-->
-    <script src="http://s3.amazonaws.com/codecademy-content/courses/hour-of-code/js/alphabet.js"></script>
+    <script src="https://s3.amazonaws.com/codecademy-content/courses/hour-of-code/js/alphabet.js"></script>
 
     <!-- Link to bubbles.js-->
-    <script src="http://s3.amazonaws.com/codecademy-content/courses/hour-of-code/js/bubbles.js"></script>
+    <script src="https://s3.amazonaws.com/codecademy-content/courses/hour-of-code/js/bubbles.js"></script>
 
 
     <!-- Link to css-->
@@ -39,7 +39,6 @@
     <!-- Jumbotron -->
     <div class="col-md-12">
         <div class="jumbotron-fluid mb-9 text-light pt-9 pb-9 rounded uk-animation-slide-bottom">
-            <button type="LogIn" class="btn btn-primary" id="logIn">Sign Up/In</button>      
             <div class="container">  
                 <h1 class="text-center"></h1>
                 <p class="lead text-center"></p>
@@ -53,7 +52,7 @@
     </div>    
     <div class="container ">
         <br>
-        <div class="row mt-3 mb-3">  
+        <div id="signIn" class="row mt-3 mb-3">  
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header bg-info text-light text-center" value = "2">SignIn Area</div>
@@ -62,23 +61,19 @@
                         <img src="images/google_gif2.gif" id="google-gif_2">
                         <button type="submit" class="btn btn-primary" id="google-logIn">Log In</button>  
                         
-                        <div > Welcom to our page <span id="name"> Andrew </span> </div>
-                        <div>Please pick an alias to start the game </div>
+                        <div id="username-input">
+                        <div > Welcome to our page <span id="name"> </span> </div>
+                        <div id="usernameLabel">Please pick an alias to start the game </div>
                         <form class="form-inline">
                                 <input type="text" class="form-control border-none" id="alias-box">                        
-                                <button type="submit" class="btn btn-primary mb-2">Start</button>
-                            </form>
+                                <button id="createUsername" type="submit" class="btn btn-primary mb-2">Start</button>
+                                <div class="errclass" id="erroralias"></div>
+                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>  
-        
-        <div class="row mt-3 mb-3">
-            <div class="col-md-2"></div>
-            <div class="col-md-8">
-            </div>
-            <div class="col-md-2"></div>
-        </div>
                 
         <div class="row mt-3 mb-3" id="re-arrange">
             <div class="col-md-12">
@@ -92,12 +87,12 @@
 
                     <div id="time-block" class="text-center border-primary">
                         <p class="lead">Time</p>
-                        <div class="card-body pt-0" id="time-left"><p class="lead">9:00</p>
+                        <div class="card-body pt-0" id="time-left"><p class="lead"></p>
                             <img src="images/timer_2.gif">
                         </div>
                     </div>
                     <div class="col-md-6 question">
-                        <p class="lead">dance me to the end of ----</p>
+                        <p class="lead"></p>
                         
                     </div>
                     <!-- <div class="col-md-2"></div> -->
@@ -105,11 +100,11 @@
                         
                         <div class="custom-control custom-radio ">
                             <input type="radio" id="customRadio1" name="customRadio">
-                            <label for="customRadio1"><p class="lead">life</p></label>
+                            <label for="customRadio1"><p class="lead"></p></label>
                         </div>
                         <div class="custom-control custom-radio ">
                             <input type="radio" id="customRadio2" name="customRadio">
-                            <label for="customRadio2"><p class="lead">love</p></label>
+                            <label for="customRadio2"><p class="lead"></p></label>
                         </div>
                         <button type="submit" class="btn btn-primary" id="submit-answer">Submit</button>      
 
@@ -119,30 +114,29 @@
             </div>           
         </div> 
         
-
-        <div class="row mt-3 mb-3 ">
-                    <div class="col-md-6 col-xs-6 scoreBox">
-                        <div class="card-header bg-info text-light text-center ">Top Scores</div> 
-                        <div class="card-body text-center" id="top-champios">Mr superWord : 10000 points</div>
-                    </div>
-                    <div class="col-md-6 col-xs-6 scoreBox">
-                            <div class="card-header bg-info text-light text-center ">Your Score</div>
-                            <div class="card-body text-center" id="your-score">5 point</div>
-                        </div>
-        </div>
-
-        <div class="row mt-3 mb-3 "> 
+        <div id="scores">
+            <div class="row mt-3 mb-3 ">
+                <div class="col-md-6 col-xs-6 scoreBox">
+                    <div class="card-header bg-info text-light text-center ">Top Scores</div>
+                    <div class="card-body text-center" id="top-champions"></div>
+                </div>
+                <div class="col-md-6 col-xs-6 scoreBox">
+                    <div class="card-header bg-info text-light text-center ">Your Score</div>
+                    <div class="card-body text-center" id="your-score"></div>
+                </div>
+            </div>
+            
+            <div class="row mt-3 mb-3 ">
                 <div class="col-md-4"></div>
                 <div class="col-md-4 text-center">
-                    <img src="https://media.giphy.com/media/l46Cy1rHbQ92uuLXa/giphy.gif" id="stats"> 
-                </div>    
-                <div class="col-md-4"></div>   
+                    <img src="https://media.giphy.com/media/l46Cy1rHbQ92uuLXa/giphy.gif" id="stats">
+                </div>
+                <div class="col-md-4"></div>
             </div>
-        <div class="row mt-5 mb-3"></div>
-    </div>
+            <div class="row mt-5 mb-3"></div>
+        </div>
 
     <!-- Link to bubbles.js-->
-    <script src="http://s3.amazonaws.com/codecademy-content/courses/hour-of-code/js/bubbles.js"></script>
     <script>
         var red     = [0, 100 , 63];
         var green   = [75, 100, 40];
@@ -153,11 +147,12 @@
         var bubleText = "LYRI QUIZ";
         // bubleText.html("HEY  YOU")
         console.log(bubleText);
-        drawName(bubleText , colors);
+        drawName(bubleText, colors);
         bounceBubbles();
     </script>
-    <script src=“lyrics.js”></script>
-    <!-- <script src=“https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js“></script>-->
+
+    <script src="firebase.js"></script>
+    <script src="lyrics.js"></script>
 
 </body>
 </html>
