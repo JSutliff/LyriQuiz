@@ -123,7 +123,7 @@ function showNextQuestion(){
           strOutput = strOutput + strArray[i] + " ";
         }
         //append the question to the question area on the page
-        $("#card-quiz-area .question").html(artist,"<br>",strOutput);
+        $("#card-quiz-area .question").html(artist+"<br>"+strOutput);
 
         //api call to find similar sounding words as our missing word to create options for quiz
         apiKey = "a731b06ce37dbb83ac69163abef82fef"
