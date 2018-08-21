@@ -72,6 +72,7 @@ function showNextQuestion(){
       
       //get the random track from the clean track list
       var trackId = cleanLyricsList[randomIndex].track.track_id;
+      var artist = cleanLyricsList[randomIndex].track.artist_name;
 
       //api call to get the lyrics of the selected track
       queryURL = "http://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=" + trackId + "&apikey=" + apiKey;
@@ -122,7 +123,7 @@ function showNextQuestion(){
           strOutput = strOutput + strArray[i] + " ";
         }
         //append the question to the question area on the page
-        $("#card-quiz-area .question").html(strOutput);
+        $("#card-quiz-area .question").html(artist+"<br>"+strOutput);
 
         //api call to find similar sounding words as our missing word to create options for quiz
         apiKey = "a731b06ce37dbb83ac69163abef82fef"
