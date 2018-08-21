@@ -40,6 +40,7 @@
                 $("#signIn").hide();
                 $("#re-arrange").show();
                 $("#scores").show();
+                showNextQuestion();                  
             }
             else {
                 $("#erroralias").text("Enter different alias, that one is taken");
@@ -105,6 +106,9 @@
                   console.log(snap.val().username);
                   $("#signIn").hide();
                   score = snap.val().score;
+                  $("#re-arrange").show();
+                  $("#scores").show();
+                  showNextQuestion();                  
               }
           })
 
