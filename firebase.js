@@ -30,7 +30,6 @@
             $("#alias-box").val("");
         }
         else{
-            console.log(exsistingNames);
             if (exsistingNames.indexOf(username.toLowerCase()) === -1) {
                 database.ref("/users/" + uid).set({
                     username: username,
@@ -75,7 +74,6 @@
     })
 
     userRef.orderByChild("score").limitToLast(3).on("value", function(snap){
-        console.log(snap.val());
         var ranked = [];
         snap.forEach(function(childSnap){
             ranked.push([childSnap.val().username, childSnap.val().score]);
@@ -83,7 +81,6 @@
         ranked.sort(function(a, b) {
             return b[1] - a[1];
         })
-        console.log(ranked);
 
         $("#top-champions").html(ranked[0][0] + " " + ranked[0][1] + "<br>"
                                 +ranked[1][0] + " " + ranked[1][1] + "<br>"
@@ -103,8 +100,7 @@
                 $("#username-input").show();
               }
               else{
-                  console.log(snap.val().username);
-                  $("#signIn").hide();
+                $("#signIn").hide();
                   score = snap.val().score;
                   $("#re-arrange").show();
                   $("#scores").show();
