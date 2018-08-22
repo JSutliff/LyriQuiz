@@ -124,7 +124,7 @@ function showNextQuestion(){
           strOutput = strOutput + strArray[i] + " ";
         }
         //append the question to the question area on the page
-        $("#card-quiz-area .question").html("Artist: "+artist+"<br>"+strOutput);
+        $("#card-quiz-area .question").html("Artist: "+artist+"<br><br>"+strOutput);
 
         //api call to find similar sounding words as our missing word to create options for quiz
         apiKey = "a731b06ce37dbb83ac69163abef82fef"
@@ -203,6 +203,9 @@ function showNextQuestion(){
 }
 
 $(document).ready(function () {
+
+  //to show initial score as 0
+  $("#your-score").text(score + " Points");
 
   //when user clicks submit button to register their answer
   $("#submit-answer").on("click", function(event){
