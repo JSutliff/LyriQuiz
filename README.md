@@ -234,9 +234,68 @@ It picks the first 3 rhyming word from the response and then makes the 4 options
 
 <!------------Andrew--------------------------------->
 ```javascript
+    //on redirect from sign in page
+    firebase.auth().getRedirectResult().then(function(result) {
+        if (result.credential) {
+            //get the google user info and hide the sign in button
+          var user = result.user;
+          $("#google-logIn").hide();
+          //add their name to the welcome message
+          $("#name").text(user.displayName);
+          //get their uid
+          uid = user.uid;
+
+          userRef.child(user.uid).once('value', function(snap){
+              //if they don't have an alias show input box
+              if(snap.val() == null){
+                $("#username-input").show();
+              }
+              else{
+                  //if they have an alias hide the sign in box and show/start the game, and get their last score
+                $("#signIn").hide();
+                  fbScore = snap.val().score;
+                  $("#re-arrange").show();
+                  $("#scores").show();
+                  showNextQuestion();                  
+              }
+          })
+
+        }
+
+    //listener to get the top 3 scores
+    userRef.orderByChild("score").limitToLast(3).on("value", function(snap){
+        var ranked = [];
+        snap.forEach(function(childSnap){
+            ranked.push([childSnap.val().username, childSnap.val().score]);
+        })
+        //firebase doesn't return the list in order so sort it
+        ranked.sort(function(a, b) {
+            return b[1] - a[1];
+        })
+
+        //update the highscore display
+        $("#top-champions").html(ranked[0][0] + " " + ranked[0][1] + "<br>"
+                                +ranked[1][0] + " " + ranked[1][1] + "<br>"
+                                +ranked[2][0] + " " + ranked[2][1])
+    })
+
+    //firebase listener to get the exsisting usernames
+    userRef.on("value", function(snap){
+        snap.forEach(function(childSnap){
+            var childData = childSnap.val();
+            if(childData.username){
+                exsistingNames.push(childData.username.toLowerCase());
+            }
+        })
+    })
 
 ```
 ## Explanation of code
+The first snippet of this code handles the redirection from Google's login page. We get the user's name from their google account to welcome them and associated uid to store their information with in our firebase database.
+
+The second snippet handles updating the high scores display. Firebase's orderByChild sorts the users by score, and limitToLast(3) limits this to our top 3 scorers. This returned object isn't sorted by score however so we save them to an array and sort them before placing them onto the page.
+
+The last snippet is a listener for our users in our firebase database. We store the usernames in an array to use later in our checks for new users creating a username. Along with a length of 4 alphabet characters, we make sure usernames our unique.
 
 <!----------------------------Andrew-------------------------------------------->
 
